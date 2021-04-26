@@ -1,0 +1,134 @@
+
+.Feed__wrapper{
+  /* width: 500px; */
+  /* width: 100%; */
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+  font-size:14px;
+}
+.Feed__addPost{
+  padding:0px 15px 15px 15px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  border-top:3px solid #A95C68; 
+  box-shadow: 1px 1px 1px #cccccc;
+  margin-bottom: 20px;
+}
+.Feed__caption_image{
+  display:flex;
+  align-items: center;
+  width: 100%;
+  
+}
+.Feed__caption_image input{
+  flex: 1;
+  border: none;
+  padding: 10px;
+  margin-left: 10px;
+  background-color: #fafafa;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+}
+.Feed__import_button{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-align: right;
+  margin-top: 10px;
+}
+.Feed__import_button input{
+  color: #ccc;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.Feed__import_button #file-upload{
+  border:none;
+}
+.Feed__postButton{
+  background-color: #A95C68!important;
+  color: #ffffff!important;
+  padding: 5px 50px!important;
+  
+}
+
+/*Post*/
+.Feed__posted{
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  box-shadow: 1px 0px 1px #cccccc;
+  padding:15px;
+}
+.Feed__post_head{
+  display: flex;
+  align-items: center;
+}
+.Feed__post_head_username{
+  font-weight: 600;
+}
+.Feed__post_head p{
+  margin-left:10px;
+}
+.Feed__progress{
+width:100%;
+margin-bottom:10px;
+}
+
+.Feed__post_date{
+  color:gray;
+}
+.Feed__posted_caption{
+  margin: 0;
+  text-align: left;
+  padding-bottom: 10px;
+  margin:20px 0px 10px 0px;
+}
+.Feed__posted_picture{
+  width: 100%;
+}
+.Feed__posted_like_comment{
+  padding-bottom: 15px;
+}
+.Feed__posted_likes{
+  display: flex;
+  align-items: center;
+}
+.Feed__posted_likes button{
+  cursor: pointer;
+  width: inherit;
+  background:none;
+  outline: none;
+  border: none;
+}
+.Feed__posted_liked{
+  color: gray;
+}
+.Feed__posted_notLike{
+  color: orange;
+}
+.Feed__posted_comment{
+  display: flex;
+  border-top: 1px solid #eeeeee;
+}
+.Feed__posted_comment input{
+  flex: 1;
+  background-color: #fafafa;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+.Feed__posted_comment button{
+  flex: 0;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #A95C68;
+}
+.Feed__posted_comment button:hover{
+  background-color:#eeeeee;
+}

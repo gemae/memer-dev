@@ -1,0 +1,56 @@
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  background-color: #A95C68;
+  color: #ffffff;
+}
+
+
+.header__logo{
+  font-family: 'Comfortaa', cursive;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.header__button{
+  color:#fff!important;
+  background-color: #ffffff;
+  border:1px solid #fff!important;
+  
+}
+.header__button:hover{
+  border:1px solid #eaeaea!important;
+}
+
+.Header__sigin{
+  background: none;
+  outline:none;
+  border:none;
+  color:#005b96;
+  cursor: pointer;
+}
+.Header__sigin:hover{
+  text-decoration: underline;
+}
+
+.Profile_picture{
+  text-align: center;
+  margin-top: 20px;
+}
+.Profile_picture input{
+  color: #A95C68;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  width: 200px;
+  display: block;
+}
+
+@media only screen and (max-width: 500px){
+  .header{
+      padding: 10px 15px;
+  }
+}
