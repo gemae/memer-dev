@@ -1,7 +1,6 @@
-import React,{useEffect,useState,useContext} from 'react';
+import React,{useContext} from 'react';
 import defaultProfile from '../default_profile.png';
 import classes from './Profile.module.css';
-import {db} from '../../firebase';
 import { CounterContext } from "../../App.js";
 
 

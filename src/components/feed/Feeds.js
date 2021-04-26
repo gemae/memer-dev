@@ -1,13 +1,12 @@
 import React, {useState,useEffect} from 'react';
 import classes from './Feed.module.css';
-import profilepicture from '../Picture.jpg';
 import defaultProfile from '../default_profile.png';
 import { Button } from '@material-ui/core';
 import Avatar from '@material-ui/core/Avatar';
 import firebase from 'firebase';
 import {storage,db} from '../../firebase';
 import Feed from './Feed';
-import moment from 'moment';
+
 
 const Feeds = ({username,user,userInfo}) => {
     const [caption,setCaption] = useState('');
