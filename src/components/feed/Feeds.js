@@ -24,6 +24,7 @@ const Feeds = ({username,user,userInfo}) => {
     };
 
     const handleUpload = () => {
+    if(user){
         if(image==null){
             return(alert('Please choose a meme you want to upload..'));
         }
@@ -67,6 +68,10 @@ const Feeds = ({username,user,userInfo}) => {
             }
 
         )
+    }
+    else{
+        return(alert('Please Sign Up first'));
+    }
     }
 
     useEffect(() => {

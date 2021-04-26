@@ -37,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: 'center',
       alignItems:'center',
   }
+  
 }));
 
 export const CounterContext = createContext();
