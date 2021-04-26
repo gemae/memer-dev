@@ -210,7 +210,7 @@ function App() {
                         />
 
                         <div className={styles.Profile_picture}>
-                        <label>Set your profile picture</label>
+                        <label>Set your profile pgiticture</label>
                         <input type='file' id="profile-upload" onChange={profileChange}/>
                         </div>
                         <Button onClick={signUp}>Sign Up</Button>
