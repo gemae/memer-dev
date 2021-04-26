@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/memer-dev/static/css/main.d5ff172c.chunk.css",
+    "main.js": "/memer-dev/static/js/main.f14596cb.chunk.js",
+    "main.js.map": "/memer-dev/static/js/main.f14596cb.chunk.js.map",
+    "runtime-main.js": "/memer-dev/static/js/runtime-main.95e3023c.js",
+    "runtime-main.js.map": "/memer-dev/static/js/runtime-main.95e3023c.js.map",
+    "static/js/2.162978da.chunk.js": "/memer-dev/static/js/2.162978da.chunk.js",
+    "static/js/2.162978da.chunk.js.map": "/memer-dev/static/js/2.162978da.chunk.js.map",
+    "static/js/3.dae340e1.chunk.js": "/memer-dev/static/js/3.dae340e1.chunk.js",
+    "static/js/3.dae340e1.chunk.js.map": "/memer-dev/static/js/3.dae340e1.chunk.js.map",
+    "index.html": "/memer-dev/index.html",
+    "static/css/main.d5ff172c.chunk.css.map": "/memer-dev/static/css/main.d5ff172c.chunk.css.map",
+    "static/js/2.162978da.chunk.js.LICENSE.txt": "/memer-dev/static/js/2.162978da.chunk.js.LICENSE.txt",
+    "static/media/default_profile.064ad453.png": "/memer-dev/static/media/default_profile.064ad453.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.95e3023c.js",
+    "static/js/2.162978da.chunk.js",
+    "static/css/main.d5ff172c.chunk.css",
+    "static/js/main.f14596cb.chunk.js"
+  ]
+}
