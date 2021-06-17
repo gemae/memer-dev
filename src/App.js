@@ -61,6 +61,7 @@ function App() {
 
   const [count, setCount] = useState(0);
 
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const showSignIn = () => {
       setOpenSignIn(true);
       setOpenSignUp(false);
@@ -71,6 +72,12 @@ function App() {
       setProfile(e.target.files[0]);
     }
   }
+
+    useEffect(() => {
+
+
+
+    },[mobileNavOpen])
 
     useEffect(() => {
     
@@ -156,12 +163,16 @@ function App() {
       )
     }
 
-
-
   return(
     <div className='App'>
       {/* <Header/> */}
         <div className = {styles.header}>
+            <div className="menuToggle">
+                <input type="checkbox" onChange={()=> setMobileNavOpen(!mobileNavOpen)} onBlur={mobileNavOpen ? ()=> setMobileNavOpen(false) : ''}/>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <p className={styles.header__logo}>MEmer</p>
             {user?
             <Button className={styles.header__button} onClick = {() => auth.signOut()}>Log Out</Button>
@@ -258,8 +269,8 @@ function App() {
       
     
       <div className='App__body'>
-        <CounterContext.Provider value={[count,setCount]}>
-          <Profile userInfo={userInfo ? userInfo: '' } user={user ? auth.currentUser : ''} />
+        <CounterContext.Provider value={[count,setCount]}> 
+          <Profile cName = {mobileNavOpen} id='Profile' userInfo={userInfo ? userInfo: '' } user={user ? auth.currentUser : ''} />
           <Feeds username={userInfo ? userInfo.displayName : ''} user={user ? auth.currentUser : ''} userInfo={userInfo ? userInfo : ''} />
           <div className='ads'></div>
         </CounterContext.Provider>

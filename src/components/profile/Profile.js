@@ -1,4 +1,4 @@
-import React,{useContext} from 'react';
+import React,{useState,useContext} from 'react';
 import defaultProfile from '../default_profile.png';
 import classes from './Profile.module.css';
 import { CounterContext } from "../../App.js";
@@ -6,9 +6,10 @@ import { CounterContext } from "../../App.js";
 
 
 
-const Profile = ({userInfo,user}) => {
-    const [count] = useContext(CounterContext);
+const Profile = ({userInfo,user,cName}) => {
 
+
+    const [count] = useContext(CounterContext);
     // const [userLikes,setUserLikes] = useState([]);
 
     // const [totalLikes, setTotalLikes] = useState(0);
@@ -27,7 +28,9 @@ const Profile = ({userInfo,user}) => {
     
     return (
         
-        <div className={classes.Profile__wrapper}>
+        <div className={cName ? classes.Profile__wrapperClose : classes.Profile__wrapper}>
+           
+              
             <div className={classes.Profile__container}>
                 <div className={classes.Profile__header}>
                 </div>

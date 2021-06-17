@@ -2,13 +2,15 @@
 .header{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px 30px;
   background-color: #A95C68;
   color: #ffffff;
   position: sticky;
   top: 0;
-  z-index: 9999;
+  z-index: 9;
 }
+
 
 
 .header__logo{

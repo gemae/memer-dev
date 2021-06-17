@@ -8,9 +8,82 @@ body,html,#root {
   height: 100%;
   min-height: 100%;
   font-size:14px;
+  position: relative;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.menuToggle{
+ position: relative;
+ height: fit-content;
+
+}
+.menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -10px;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 9999;
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+.menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+.menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+.menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* .menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(-45deg) translate(-2px, -2px);
+  background: #232323;
+}
+.menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+.menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(45deg) translate(-10px, -6px);
+} */
+ .Profile__wrapper input:checked ~ .Profile__wrapper
+{
+  left: 0px;
+}
+
+@media only screen and (min-width: 769px){
+  .menuToggle{
+    display: none;
+  }
 }
