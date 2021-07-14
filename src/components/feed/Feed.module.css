@@ -111,13 +111,18 @@ margin-bottom:10px;
 .Feed__posted_notLike{
   color: orange;
 }
+.Post_comment{
+margin-top:30px;
+padding-left:10px;
+text-align: left;
+}
 .Feed__posted_comment{
   display: flex;
-  border-top: 1px solid #eeeeee;
+  border: 1px solid #eeeeee;
 }
 .Feed__posted_comment input{
   flex: 1;
-  background-color: #fafafa;
+  
   border: none;
   outline: none;
   padding: 10px;
@@ -127,8 +132,5 @@ margin-bottom:10px;
   border: none;
   cursor: pointer;
   padding: 10px;
-  background-color: #A95C68;
-}
-.Feed__posted_comment button:hover{
-  background-color:#eeeeee;
+  color:#A95C68;
 }

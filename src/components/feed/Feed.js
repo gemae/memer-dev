@@ -7,12 +7,14 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import { CounterContext } from "../../App.js";
 
-const Feed = ({username,imageUrl,caption,postId,likes,user,ppId}) => {
+const Feed = ({username,imageUrl,caption,postId,likes,user,ppId,userInfo}) => {
     // let timestampDate = new Date(timestamp.seconds);
     const [userInfos,setUserInfos] = useState(null);
     const [isBoxLiked,setIsBoxLiked] = useState(false);
     const [count, setCount] = useContext(CounterContext);
     const [profileURl,setProfileUrl] = useState('');
+    const [comments,setComments] = useState([]);
+    const [comment,setComment] = useState('');
     
     const likePost = () => {
     
@@ -36,11 +38,19 @@ const Feed = ({username,imageUrl,caption,postId,likes,user,ppId}) => {
         }
 
     }
-    // const fetchData = async() => {
-    //     const response = db.collection("users").doc(user.uid);
-    //     const data=await response.get();
-    //     setUserInfos(data.data());
-    // }
+
+    const postComment = (event) => {
+        event.preventDefault();
+        if(user){
+        db.collection("posts").doc(postId).collection("comments").add({
+            comment: comment,
+            username: userInfo.displayName,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        });
+        setComment('');}
+        else{alert('Please log in')
+        }    
+    }
 
     useEffect(() => {
         if(user){
@@ -66,7 +76,27 @@ const Feed = ({username,imageUrl,caption,postId,likes,user,ppId}) => {
         }
     },[userInfos,user])
 
-   
+   useEffect(() => {
+        let unsubscribe;
+
+        if(postId){
+            unsubscribe = db
+            .collection("posts")
+            .doc(postId)
+            .collection("comments")
+            .orderBy('timestamp', 'desc')
+            .onSnapshot((snapshot) => {
+                setComments(snapshot.docs.map((doc) => doc.data()));
+                console.log(comments)
+            });
+          
+        }
+        return () => {
+            unsubscribe();
+            
+        }
+   },[postId])
+
 
     return (
             <div className={classes.Feed__posted}>
@@ -82,9 +112,27 @@ const Feed = ({username,imageUrl,caption,postId,likes,user,ppId}) => {
                         <button disabled={!user ? true : false} onClick={likePost}><WhatshotIcon className={isBoxLiked || !user ? classes.Feed__posted_liked : classes.Feed__posted_notLike}/></button>
                         <p><small>{likes}{likes > 1 ? ' likes' : ' like'} </small></p>
                     </span>
-                <span className={classes.Feed__posted_comment}>
-                <input placeholder='Comment here...'/>
-                <button>Go!</button>
+
+                <div className={classes.Post_comment}>
+                    {comments.map((com) => 
+                      
+                            <p><strong>{com.username}</strong>&nbsp;{com.comment}</p>
+                        
+                    )}
+                </div>
+
+                <span >
+               
+                <form className={classes.Feed__posted_comment}>
+                    <input type='text' value={comment} placeholder='Comment here...' onChange={(e) => setComment(e.target.value)}/>
+                    <button 
+                    disabled={!comment}
+                    type='submit'
+                    onClick={postComment}
+                    >
+                       Post </button>
+                </form>
+                
                 </span>
                     
             </div>

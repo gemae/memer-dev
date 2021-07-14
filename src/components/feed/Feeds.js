@@ -94,6 +94,7 @@ const Feeds = ({username,user,userInfo}) => {
                 <div className={classes.Feed__caption_image}>
                     <Avatar alt='profile' src={user ? userInfo.profilePicture : defaultProfile}/>
                     <input type='text'
+                        value={caption}
                         placeholder='Caption here...'
                         onChange={(e) => setCaption(e.target.value)}
                     />

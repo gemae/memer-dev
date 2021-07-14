@@ -138,7 +138,7 @@ function App() {
               alert(error.message);
           },
           () => {
-              //comple function...
+              //compile function...
               storage
                   .ref("profiles")
                   .child(profile.name)
