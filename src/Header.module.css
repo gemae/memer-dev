@@ -3,20 +3,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
-  background-color: #A95C68;
+  padding: 10px 80px;
+  /* background-color: var(--main-color); */
   color: #ffffff;
   position: sticky;
   top: 0;
   z-index: 9;
 }
 
+.logo__image{
+  width: 100px;
+}
 
-
-.header__logo{
-  font-family: 'Comfortaa', cursive;
-  font-weight: 700;
-  font-size: 18px;
+.header__logo {
+  margin: 0;
 }
 
 .header__button{

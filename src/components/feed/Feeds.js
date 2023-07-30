@@ -1,8 +1,8 @@
 import React, {useState,useEffect} from 'react';
 import classes from './Feed.module.css';
 import defaultProfile from '../default_profile.png';
-import { Button } from '@material-ui/core';
-import Avatar from '@material-ui/core/Avatar';
+// import { Button } from '@material-ui/core';
+// import Avatar from '@material-ui/core/Avatar';
 import firebase from 'firebase';
 import {storage,db} from '../../firebase';
 import Feed from './Feed';
@@ -89,23 +89,21 @@ const Feeds = ({username,user,userInfo}) => {
 
     return (
         <div className={classes.Feed__wrapper}>
-            <div className={classes.Feed__addPost}>
-                <progress className={classes.Feed__progress} value={progress} max='100'/>
-                <div className={classes.Feed__caption_image}>
-                    <Avatar alt='profile' src={user ? userInfo.profilePicture : defaultProfile}/>
-                    <input type='text'
-                        value={caption}
-                        placeholder='Caption here...'
-                        onChange={(e) => setCaption(e.target.value)}
-                    />
-                </div>
-               <div className={classes.Feed__import_button}>
-                   <input type='file' id="file-upload" onChange={handleChange}/>
-            
-                   <Button className={classes.Feed__postButton} onClick={handleUpload}>Post</Button>
-               </div>
-                
+            <div className="bg-white rounded-3xl p-6 flex items-center gap-6 border-t-4 border-width-2 border-yellow">
+                {/* <progress className={classes.Feed__progress} value={progress} max='100'/> */}
+                <img className="w-14" alt='profile' src={user ? userInfo.profilePicture : defaultProfile}/>
+                <input 
+                    className="outline-none flex-grow"
+                    type='text'
+                    value={caption}
+                    placeholder='Post here...'
+                    onChange={(e) => setCaption(e.target.value)}
+                />
+                <button className="h-fit bg-yellow text-white px-8 py-2 rounded-3xl" onClick={handleUpload}>Post</button>
             </div>
+               {/* <div className={classes.Feed__import_button}>
+                   <input type='file' id="file-upload" onChange={handleChange}/>  
+                </div> */}
         
             {posts.map(({id,post}) => 
                 <Feed
