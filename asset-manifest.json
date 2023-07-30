@@ -1,23 +1,16 @@
 {
   "files": {
-    "main.css": "/memer-dev/static/css/main.463dbcc7.chunk.css",
-    "main.js": "/memer-dev/static/js/main.370cc0f6.chunk.js",
-    "main.js.map": "/memer-dev/static/js/main.370cc0f6.chunk.js.map",
-    "runtime-main.js": "/memer-dev/static/js/runtime-main.95e3023c.js",
-    "runtime-main.js.map": "/memer-dev/static/js/runtime-main.95e3023c.js.map",
-    "static/js/2.6552826c.chunk.js": "/memer-dev/static/js/2.6552826c.chunk.js",
-    "static/js/2.6552826c.chunk.js.map": "/memer-dev/static/js/2.6552826c.chunk.js.map",
-    "static/js/3.dae340e1.chunk.js": "/memer-dev/static/js/3.dae340e1.chunk.js",
-    "static/js/3.dae340e1.chunk.js.map": "/memer-dev/static/js/3.dae340e1.chunk.js.map",
+    "main.css": "/memer-dev/static/css/main.2a2db482.css",
+    "main.js": "/memer-dev/static/js/main.97fea1ad.js",
+    "static/js/787.e8a9eddf.chunk.js": "/memer-dev/static/js/787.e8a9eddf.chunk.js",
+    "static/media/default_profile.png": "/memer-dev/static/media/default_profile.064ad453cc4a1bfb84fe.png",
     "index.html": "/memer-dev/index.html",
-    "static/css/main.463dbcc7.chunk.css.map": "/memer-dev/static/css/main.463dbcc7.chunk.css.map",
-    "static/js/2.6552826c.chunk.js.LICENSE.txt": "/memer-dev/static/js/2.6552826c.chunk.js.LICENSE.txt",
-    "static/media/default_profile.064ad453.png": "/memer-dev/static/media/default_profile.064ad453.png"
+    "main.2a2db482.css.map": "/memer-dev/static/css/main.2a2db482.css.map",
+    "main.97fea1ad.js.map": "/memer-dev/static/js/main.97fea1ad.js.map",
+    "787.e8a9eddf.chunk.js.map": "/memer-dev/static/js/787.e8a9eddf.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.95e3023c.js",
-    "static/js/2.6552826c.chunk.js",
-    "static/css/main.463dbcc7.chunk.css",
-    "static/js/main.370cc0f6.chunk.js"
+    "static/css/main.2a2db482.css",
+    "static/js/main.97fea1ad.js"
   ]
 }
